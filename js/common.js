@@ -1,35 +1,33 @@
 // login
 
-$("#log_form").on("submit",function(e){
+$("#btn_click").on("click",function(e){
   e.preventDefault();
-  //return false;
-      let mailCheck = $("#formGroupExampleInput").val();
-      let pwdCheck =  $("#formGroupExampleInput2").val();
+      let mailCheck = $("#userEmail").val();
+      let pwdCheck =  $("#userPwd").val();
         if(mailCheck == ""){
           $('#email_req').text("Please Enter your email!");
         }
         if(pwdCheck == ""){
           $('#pwd_req').text("Please Enter your password!");
         }
-
-        if(mailCheck != ""){
-          console.log(true)
-        }else if(mailCheck == ""){
-          console.log(false);
+        if(mailCheck != "" && pwdCheck != ""){
+          $('#log_form').submit();
+          return true;
         }
+        
 });
 
 
-$("#formGroupExampleInput").on('keyup change', function(){
-  let mailCheck = $("#formGroupExampleInput").val();
+$("#userEmail").on('keyup change', function(){
+  let mailCheck = $("#userEmail").val();
         if(mailCheck != ""){
           $('#email_req').text("");
         }else if(mailCheck == ""){
           $('#email_req').text("Please Enter your email!");
         }
 });
-$("#formGroupExampleInput2").on('keyup change', function(){  
-  let pwdCheck =  $("#formGroupExampleInput2").val();          
+$("#userPwd").on('keyup change', function(){  
+  let pwdCheck =  $("#userPwd").val();          
         if(pwdCheck != ""){
           $('#pwd_req').text("");
         }else if(pwdCheck == ""){
@@ -39,13 +37,12 @@ $("#formGroupExampleInput2").on('keyup change', function(){
 
 // register
 
-$("#reg_form").on("submit",function(e){
+$("#reg_click").on("submit",function(e){
   e.preventDefault();
-  //return false;
-    let reg_user = $("#formGroupExampleInput01").val();
-    let reg_mail =  $("#formGroupExampleInput02").val();
-    let reg_pwd =  $("#formGroupExampleInput03").val();
-    let reg_cmfpwd =  $("#formGroupExampleInput04").val();
+    let reg_user = $("#userName").val();
+    let reg_mail =  $("#urs_email").val();
+    let reg_pwd =  $("#urs_password").val();
+    let reg_cmfpwd =  $("#urs_cmfpassword").val();
         if(reg_user == ""){
           $('#user').text("Please Enter your Name!");
         }
@@ -58,33 +55,37 @@ $("#reg_form").on("submit",function(e){
         if(reg_cmfpwd == ""){
           $('#cmf_pwd').text("Please Enter your Comfirm Password!");
         }
+        if(reg_user != "" && reg_mail != "" && reg_pwd != "" && reg_cmfpwd != ""){
+          $('#reg_form').submit();
+          return true;
+        }
 });
-$("#formGroupExampleInput01").on('keyup change', function(){
-  let reg_user = $("#formGroupExampleInput01").val();
+$("#userName").on('keyup change', function(){
+  let reg_user = $("#userName").val();
       if(reg_user != ""){
         $('#user').text("");
       }else if(reg_user == ""){
         $('#user').text("Please Enter your Name!");
       }
 });
-$("#formGroupExampleInput02").on('keyup change', function(){
-  let reg_mail =  $("#formGroupExampleInput02").val();
+$("#urs_email").on('keyup change', function(){
+  let reg_mail =  $("#urs_email").val();
       if(reg_mail != ""){
         $('#mail').text("");
       }else if(reg_mail == ""){
         $('#mail').text("Please Enter your Email!");
       }
 });
-$("#formGroupExampleInput03").on('keyup change', function(){
-  let reg_pwd =  $("#formGroupExampleInput03").val();
+$("#urs_password").on('keyup change', function(){
+  let reg_pwd =  $("#urs_password").val();
       if(reg_pwd != ""){
         $('#pwd').text("");
       }else if(reg_pwd == ""){
         $('#pwd').text("Please Enter your Password!");
       }
 });
-$("#formGroupExampleInput04").on('keyup change', function(){
-  let reg_cmfpwd =  $("#formGroupExampleInput04").val();
+$("#urs_cmfpassword").on('keyup change', function(){
+  let reg_cmfpwd =  $("#urs_cmfpassword").val();
       if(reg_cmfpwd != ""){
         $('#cmf_pwd').text("");
       }else if(reg_cmfpwd == ""){
@@ -94,18 +95,21 @@ $("#formGroupExampleInput04").on('keyup change', function(){
 
 // forget password
 
-$("#pwd_form").on("submit",function(e){
+$("#for_click").on("submit",function(e){
   e.preventDefault();
-  //return false;
-      let forget_pwd = $("#formGroupExampleInput_pwd").val();
+      let forget_pwd = $("#forget_mail_pwd").val();
         if(forget_pwd == ""){
           $('#pwd').text("Please Enter your Password!");
+        }
+        if(forget_pwd != ""){
+          $('#pwd_form').submit();
+          return true;
         }
 });
 
 
-$("#formGroupExampleInput_pwd").on('keyup change', function(){
-  let forget_pwd = $("#formGroupExampleInput_pwd").val();
+$("#forget_mail_pwd").on('keyup change', function(){
+  let forget_pwd = $("#forget_mail_pwd").val();
         if(forget_pwd != ""){
           $('#pwd').text("");
         }else if(forget_pwd == ""){

@@ -57,30 +57,30 @@
     <div><br>
         <div class="border border-warning overflow-hidden">
         <div class="col-4 m-auto">
-        <form id="reg_form">
+        <form id="reg_form" action="" method="post">
             <div class="form-group">
-              <label for="formGroupExampleInput01">User Name</label>
-              <input type="text" class="form-control" id="formGroupExampleInput01" name="name" placeholder="Enter Your Name">
+              <label for="userName">User Name</label>
+              <input type="text" class="form-control" id="userName" name="name" placeholder="Enter Your Name">
               <span class="req pt-1" id="user" style="color: #ed5454;font-size: 14px;"> </span>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput02">Email</label>
-                <input type="email" class="form-control" id="formGroupExampleInput02" name="email" placeholder="xxx@gmail.com">
+                <label for="urs_email">Email</label>
+                <input type="email" class="form-control" id="urs_email" name="email" placeholder="xxx@gmail.com">
                 <span class="req pt-1" id="mail" style="color: #ed5454;font-size: 14px;"> </span>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput03">Password</label>
-                <input type="password" class="form-control" id="formGroupExampleInput03" name="password" placeholder="Enter Your Password">
+                <label for="urs_password">Password</label>
+                <input type="password" class="form-control" id="urs_password" name="password" placeholder="Enter Your Password">
                 <span class="req pt-1" id="pwd" style="color: #ed5454;font-size: 14px;"> </span>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput04">Comfirm Password</label>
-                <input type="password" class="form-control" id="formGroupExampleInput04" name="comfirm_password" placeholder="Enter Your Comfirm Password">
+                <label for="urs_cmfpassword">Comfirm Password</label>
+                <input type="password" class="form-control" id="urs_cmfpassword" name="comfirm_password" placeholder="Enter Your Comfirm Password">
                 <span class="req pt-1" id="cmf_pwd" style="color: #ed5454;font-size: 14px;"> </span>
             </div>
         <div class="form-group ">
             <a href="login.html" type="submit" class="btn btn-primary d-block m-auto nav-link float-left">Back</a>
-            <button type="submit" class="btn btn-primary d-block m-auto nav-link float-right">Submit</button>
+            <button type="submit" class="btn btn-primary d-block m-auto nav-link float-right" id="reg_click">Submit</button>
         </div>
           </form>
         </div>
