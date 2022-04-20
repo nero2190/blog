@@ -58,21 +58,23 @@
     <div>
         <div class="border border-warning overflow-hidden">
         <div class="col-4 m-auto">
-        <form>
+        <form action="" method="post" id="log_form">
             <div class="form-group">
-              <label for="formGroupExampleInput">Email</label>
-              <input type="email" class="form-control" id="formGroupExampleInput" name="email" placeholder="Enter Your Email">
+              <label for="userEmail">Email</label>
+              <input type="email" class="form-control" id="userEmail" name="email" placeholder="Enter Your Email">
+              <span class="req pt-1" id="email_req" style="color: #ed5454;font-size: 14px;"> </span>
             </div>
             <div class="form-group">
-              <label for="formGroupExampleInput2">Password</label>
-              <input type="password" class="form-control" id="formGroupExampleInput2" name="password" placeholder="Enter Your Password">
+              <label for="userPwd">Password</label>
+              <input type="password" class="form-control" id="userPwd" name="password" placeholder="Enter Your Password">
+              <span class="req pt-1" id="pwd_req"style="color: #ed5454;font-size: 14px;"> </span>
             </div>
         <div class="form-group ">
-            <button type="submit" class="btn btn-primary d-block m-auto">Submit</button>
+            <button type="submit" class="btn btn-primary d-block m-auto" onclick=" " id="btn_click">Submit</button>
         </div>
         <div>
-            <a href="#" class="nav-link float-right">Sing up</a>
-            <a href="#" class="nav-link float-right">Forget Password?</a>
+            <a href="register.html" class="nav-link float-right">Sing up</a>
+            <a href="forget_password.html" class="nav-link float-left">Forget Password?</a>
            
         </div>
           </form>
@@ -85,5 +87,6 @@
     <script src="../js/tether.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/custom.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 </html>
