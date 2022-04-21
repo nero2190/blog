@@ -138,4 +138,5 @@
                     </div>
                 </div>
             </div><!-- end container -->
+            <p>Maymyanmarlin.co.jp</p>
         </footer><!-- end footer -->

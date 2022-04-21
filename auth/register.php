@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,17 +54,33 @@
             </div><!-- end row -->
         </div><!-- end header-logo -->
     </div><!-- end header -->
-    <div><br><br>
+    <div><br>
         <div class="border border-warning overflow-hidden">
         <div class="col-4 m-auto">
-        <form>
+        <form id="reg_form" action="" method="post">
             <div class="form-group">
-              <label for="formGroupExampleInput">Please Enter Your Email!</label>
-              <input type="email" class="form-control" id="formGroupExampleInput" name="email" placeholder="xxx@gmail.com">
+              <label for="userName">User Name</label>
+              <input type="text" class="form-control" id="userName" name="name" placeholder="Enter Your Name">
+              <span class="req pt-1" id="user" style="color: #ed5454;font-size: 14px;"> </span>
+            </div>
+            <div class="form-group">
+                <label for="urs_email">Email</label>
+                <input type="email" class="form-control" id="urs_email" name="email" placeholder="xxx@gmail.com">
+                <span class="req pt-1" id="mail" style="color: #ed5454;font-size: 14px;"> </span>
+            </div>
+            <div class="form-group">
+                <label for="urs_password">Password</label>
+                <input type="password" class="form-control" id="urs_password" name="password" placeholder="Enter Your Password">
+                <span class="req pt-1" id="pwd" style="color: #ed5454;font-size: 14px;"> </span>
+            </div>
+            <div class="form-group">
+                <label for="urs_cmfpassword">Comfirm Password</label>
+                <input type="password" class="form-control" id="urs_cmfpassword" name="comfirm_password" placeholder="Enter Your Comfirm Password">
+                <span class="req pt-1" id="cmf_pwd" style="color: #ed5454;font-size: 14px;"> </span>
             </div>
         <div class="form-group ">
-            <button type="submit" class="btn btn-primary d-block m-auto nav-link float-left"> Back</button>
-            <button type="submit" class="btn btn-primary d-block m-auto nav-link float-right">Submit</button>
+            <a href="login.html" type="submit" class="btn btn-primary d-block m-auto nav-link float-left">Back</a>
+            <button type="submit" class="btn btn-primary d-block m-auto nav-link float-right" id="reg_click">Submit</button>
         </div>
           </form>
         </div>
@@ -77,5 +92,6 @@
     <script src="../js/tether.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/custom.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 </html>
